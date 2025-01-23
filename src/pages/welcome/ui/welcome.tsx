@@ -1,11 +1,10 @@
 import { Button } from "@heroui/button";
-import { ArrowRight } from "lucide-react";
 import { Spacer } from "@heroui/spacer";
 import { SolutionsCard } from "@/widgets/solutions-card";
 import { ScrollButton } from "@/shared/ui";
 import { Tab, Tabs } from "@heroui/tabs";
 import { Logo } from "@/widgets/logo";
-import { BiLogoTelegram } from "react-icons/bi";
+import { BiGlobe, BiLogoTelegram } from "react-icons/bi";
 import { Card, CardBody } from "@heroui/react";
 
 export default function Welcome() {
@@ -31,7 +30,7 @@ export default function Welcome() {
                   </h1>
                 </div>
                 <p
-                  className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 max-w-md dark:text-gray-300 text-gray-900 italic">
+                  className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 max-w-md dark:text-gray-300 text-gray-900">
                   У нас есть курсы по обучению пентестингу, чтобы помочь вам стать экспертом в области
                   кибербезопасности.
                 </p>
@@ -55,12 +54,12 @@ export default function Welcome() {
                 <div
                   className="grid xl:grid-cols-2 xl:grid-rows-1 xl:gap-x-2 grid-cols-1  grid-rows-2 gap-y-2 pt-5">
                   <Button variant="flat" className="w-full">
-                    <ArrowRight/>
-                    Открыть платформу
+                    <BiGlobe/>
+                    Открыть web-платформу
                   </Button>
                   <Button variant="flat" className="w-full">
                     <BiLogoTelegram/>
-                    Открыть бота
+                    Открыть telegram-платформу
                   </Button>
                 </div>
               </div>
@@ -71,9 +70,9 @@ export default function Welcome() {
               <p className="text-sm ">
                 Компания предоставляет широкий спектр услуг для малого и среднего бизнеса:
               </p>
-              <Spacer y={2}/>
+              <Spacer y={5}/>
               <div className="flex w-full flex-col">
-                <Tabs aria-label="Options" fullWidth>
+                <Tabs aria-label="Options"  variant={"bordered"} fullWidth>
                   <Tab key="photos" title="Photos">
                     <Card>
                       <CardBody>

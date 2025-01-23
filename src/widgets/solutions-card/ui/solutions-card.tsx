@@ -12,7 +12,7 @@ type Props = {
 export default function SolutionsCard(props: Props) {
   return (
     <Card className="pb-4 rounded-3xl">
-      <CardHeader className="overflow-visible">
+      <CardHeader>
         <Image
           alt="Card background"
           className="object-cover rounded-xl"

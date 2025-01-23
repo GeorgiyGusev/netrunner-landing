@@ -6,7 +6,7 @@ import { ScrollButton } from "@/shared/ui";
 import { Tab, Tabs } from "@heroui/tabs";
 import { Logo } from "@/widgets/logo";
 import { BiLogoTelegram } from "react-icons/bi";
-
+import { Card, CardBody } from "@heroui/react";
 
 export default function Welcome() {
   return (

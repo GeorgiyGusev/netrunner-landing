@@ -10,7 +10,6 @@ import {
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import { ThemeProvider } from 'remix-themes'
-import Logo from "/logo-dark.svg"
 import { themeSessionResolver } from "@/app/themes/sessions.server";
 import { PreventFlashOnWrongTheme, useTheme } from "remix-themes";
 import { HeroUIProvider } from "@heroui/react";
@@ -34,8 +33,6 @@ export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
 
-
-// Return the theme from the session storage using the loader
 export const loader: LoaderFunction = async ({ request }) => {
   const { getTheme } = await themeSessionResolver(request);
   return {
@@ -55,6 +52,8 @@ export default function AppWithProviders() {
 function App() {
   const data = useLoaderData();
   const [theme] = useTheme();
+
+  // noinspection HtmlRequiredTitleElement
   return (
     <html lang="en" className={theme ?? ""}>
     <head>

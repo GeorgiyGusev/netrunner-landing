@@ -1,5 +1,3 @@
-// sessions.server.tsx
-
 import { createThemeSessionResolver } from "remix-themes";
 import { createCookieSessionStorage } from "react-router";
 

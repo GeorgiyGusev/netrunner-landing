@@ -6,6 +6,7 @@ import { Tab, Tabs } from "@heroui/tabs";
 import { Logo } from "@/widgets/logo";
 import { BiGlobe, BiLogoTelegram } from "react-icons/bi";
 import { Card, CardBody } from "@heroui/react";
+import { Link } from "@heroui/link";
 
 export default function Welcome() {
   return (
@@ -53,13 +54,13 @@ export default function Welcome() {
                 </p>
                 <div
                   className="grid xl:grid-cols-2 xl:grid-rows-1 xl:gap-x-2 grid-cols-1  grid-rows-2 gap-y-2 pt-5">
-                  <Button variant="flat" className="w-full">
+                  <Button as={Link} href="https://nrgroup.pro" variant="flat" className="w-full">
                     <BiGlobe/>
-                    Открыть web-платформу
+                    Web-платформа
                   </Button>
-                  <Button variant="flat" className="w-full">
+                  <Button as={Link} href="" variant="flat" className="w-full">
                     <BiLogoTelegram/>
-                    Открыть telegram-платформу
+                    Telegram-платформа
                   </Button>
                 </div>
               </div>

@@ -3,14 +3,12 @@ import { ArrowRight } from "lucide-react";
 import { Spacer } from "@heroui/spacer";
 import { SolutionsCard } from "@/widgets/solutions-card";
 import { ScrollButton } from "@/shared/ui";
-import { Divider } from "@heroui/react";
+import { Tab, Tabs } from "@heroui/tabs";
 import { Logo } from "@/widgets/logo";
+import { Card, CardBody } from "@heroui/card";
 
 
 export default function Welcome() {
-
-
-
   return (
     <main>
       <div className="flex flex-col justify-center min-h-screen text-white p-5">
@@ -68,14 +66,37 @@ export default function Welcome() {
               <p className="text-sm ">
                 Компания предоставляет широкий спектр услуг для малого и среднего бизнеса:
               </p>
-              <Divider className="my-3"/>
-              <ul className="max-w-md space-y-1 list-disc list-inside text-sm">
-                <li>Развёртование корпоративной сети под ключ</li>
-                <li>Создание корпоративной инфраструктуры</li>
-                <li>Аудит безопасности</li>
-                <li>Создание и поддержка защищённых хранилищ под ключ</li>
-                <li>Программы корпоративного обучения</li>
-              </ul>
+              <Spacer y={2}/>
+              <div className="flex w-full flex-col">
+                <Tabs aria-label="Options" fullWidth>
+                  <Tab key="photos" title="Photos">
+                    <Card>
+                      <CardBody>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </CardBody>
+                    </Card>
+                  </Tab>
+                  <Tab key="music" title="Music">
+                    <Card>
+                      <CardBody>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur.
+                      </CardBody>
+                    </Card>
+                  </Tab>
+                  <Tab key="videos" title="Videos">
+                    <Card>
+                      <CardBody>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                      </CardBody>
+                    </Card>
+                  </Tab>
+                </Tabs>
+              </div>
             </SolutionsCard>
 
             <SolutionsCard banner="assets/solutions/offline.png" title="OFFLINE PROJECT">

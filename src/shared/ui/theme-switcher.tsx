@@ -8,23 +8,15 @@ function ThemeSwitcher() {
   const [theme, setTheme] = useTheme();
   const [themeSwitcher, setThemeSwitcher] = useState(false);
 
-  useEffect(() => {
-    console.log(theme)
-    if (theme == "dark") {
-      setThemeSwitcher(false);
-    } else if (theme == "light") {
-      setThemeSwitcher(true);
-    }
-  }, [theme]);
-
+  useEffect(() => setThemeSwitcher(theme == "light"), [theme]);
 
   return (
     <Switch
       defaultSelected
       size="lg"
       isSelected={themeSwitcher}
-      onValueChange={(isSelected: boolean) => setTheme(isSelected ? Theme.LIGHT : Theme.DARK)}
-      thumbIcon={({ isSelected, className }) =>
+      onValueChange={(isSelected) => setTheme(isSelected ? Theme.LIGHT : Theme.DARK)}
+      thumbIcon={({isSelected, className}) =>
         isSelected ? <SunIcon className={className}/> : <MoonIcon className={className}/>
       }
     />

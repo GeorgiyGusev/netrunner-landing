@@ -15,15 +15,19 @@ export default function HeaderLogo(props: Props) {
       <Image
         src="/logo-light.svg"
         alt="Netrunner HeaderLogo"
-        className="dark:hidden w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 z-0"
+        className="dark:hidden  z-0"
         radius="none"
+        height={40}
+        width={40}
       />
 
       <Image
         src="/logo-dark.svg"
         alt="Netrunner HeaderLogo"
-        className="hidden dark:block w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 lg:w-56 lg:h-56 z-0"
+        className="hidden dark:block z-0"
         radius="none"
+        height={40}
+        width={40}
       />
 
     </>

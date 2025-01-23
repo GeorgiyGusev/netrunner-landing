@@ -10,11 +10,8 @@ function ThemeSwitcher() {
 
   useEffect(() => {
     console.log(theme)
-    if (theme == "dark") {
-      setThemeSwitcher(false);
-    } else if (theme == "light") {
-      setThemeSwitcher(true);
-    }
+    theme == "dark" ? setThemeSwitcher(false) : setThemeSwitcher(true);
+
   }, [theme]);
 
 

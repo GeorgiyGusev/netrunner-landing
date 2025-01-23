@@ -10,7 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
 import { ThemeProvider } from 'remix-themes'
-import Logo from "/logo.png"
+import Logo from "/logo-dark.svg"
 import { themeSessionResolver } from "@/app/themes/sessions.server";
 import { PreventFlashOnWrongTheme, useTheme } from "remix-themes";
 import { HeroUIProvider } from "@heroui/react";
@@ -32,7 +32,6 @@ export const links: Route.LinksFunction = () => [
     href: "https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap",
   },
   { rel: "stylesheet", href: stylesheet },
-  { rel: "icon", href: Logo }
 ];
 
 
@@ -64,6 +63,7 @@ function App() {
       <Meta/>
       <PreventFlashOnWrongTheme ssrTheme={Boolean(data.theme)}/>
       <Links/>
+      <link rel="icon" href={`/logo-${theme}.svg`}/>
     </head>
     <body>
     <HeroUIProvider>

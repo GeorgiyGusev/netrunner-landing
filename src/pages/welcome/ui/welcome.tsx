@@ -5,12 +5,10 @@ import { SolutionsCard } from "@/widgets/solutions-card";
 import { ScrollButton } from "@/shared/ui";
 import { Divider } from "@heroui/react";
 import { Logo } from "@/widgets/logo";
+import { BiLogoTelegram } from "react-icons/bi";
 
 
 export default function Welcome() {
-
-
-
   return (
     <main>
       <div className="flex flex-col justify-center min-h-screen text-white p-5">
@@ -54,12 +52,17 @@ export default function Welcome() {
                   Начиная от базовых знаний которые помогут вам продвинуться в ИБ, заканчивая топовыми курсами
                   разработанными совместно с нашими партнерами.
                 </p>
-                <a href="https://nrgroup.pro/">
+                <div
+                  className="grid xl:grid-cols-2 xl:grid-rows-1 xl:gap-x-2 grid-cols-1  grid-rows-2 gap-y-2 pt-5">
                   <Button variant="flat" className="w-full">
                     <ArrowRight/>
                     Открыть платформу
                   </Button>
-                </a>
+                  <Button variant="flat" className="w-full">
+                    <BiLogoTelegram/>
+                    Открыть бота
+                  </Button>
+                </div>
               </div>
             </SolutionsCard>
 
